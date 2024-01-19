@@ -15,13 +15,14 @@
 
         header {
             text-align: center;
-            padding: 20px;
+            padding: 10px; /* Уменьшен верхний отступ */
+            margin-bottom: 20px; /* Добавлен нижний отступ */
         }
 
         .links {
             text-align: center;
-            margin-top: 30px;
-            margin-bottom: 20px; /* Добавлен отступ снизу */
+            margin-top: 10px; /* Уменьшен верхний отступ */
+            margin-bottom: 20px; /* Оставлен нижний отступ */
         }
 
         a {
@@ -34,6 +35,10 @@
 
         a:hover {
             text-decoration: underline; /* Добавлено подчеркивание при наведении */
+        }
+
+        .tenor-gif-embed {
+            width: 100%;
         }
     </style>
 </head>
@@ -49,16 +54,7 @@
         <p>Donation Alerts: <a href="https://www.donationalerts.com/r/florentem" target="_blank">Donate</a></p>
     </div>
 
-    <script>
-        function copyToClipboard(text) {
-            const tempInput = document.createElement('input');
-            tempInput.value = text;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-            alert('Copied to clipboard: ' + text);
-        }
-    </script>
+    <!-- Вставляем гифку -->
+    <div class="tenor-gif-embed" data-postid="24148796" data-share-method="host" data-aspect-ratio="2.02532" data-width="100%"><a href="https://tenor.com/view/hart-heart-pinteresr-heart-gif-heart-png-falling-hearts-gif-24148796">Hart Heart Sticker</a>from <a href="https://tenor.com/search/hart-stickers">Hart Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 </body>
 </html>
