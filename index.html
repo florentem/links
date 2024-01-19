@@ -21,6 +21,7 @@
         .links {
             text-align: center;
             margin-top: 30px;
+            margin-bottom: 20px; /* Добавлен отступ снизу */
         }
 
         a {
@@ -28,6 +29,11 @@
             text-decoration: none;
             font-weight: bold;
             margin: 10px;
+            cursor: pointer; /* Добавлен указатель при наведении */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Добавлено подчеркивание при наведении */
         }
     </style>
 </head>
@@ -38,9 +44,21 @@
 
     <div class="links">
         <p>Telegram: <a href="https://t.me/coowersyy" target="_blank">coowersyy</a></p>
-        <p>Discord: нось#4004</p>
+        <p>Discord: <span id="discordNickname" onclick="copyToClipboard('нось#4004')">нось#4004</span></p>
         <p>Twitch: <a href="https://www.twitch.tv/florentem_" target="_blank">florentem_</a></p>
         <p>Donation Alerts: <a href="https://www.donationalerts.com/r/florentem" target="_blank">Donate</a></p>
     </div>
+
+    <script>
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Copied to clipboard: ' + text);
+        }
+    </script>
 </body>
 </html>
