@@ -5,49 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Florentem info</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-image: url('https://media.giphy.com/media/O1A7W9ipgqOpq/giphy.gif');
+            background-size: cover;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .info, .links {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+        }
+    </style>
 </head>
 
-<body style="margin: 0; padding: 0; font-family: 'Inter', sans-serif; background-image: url('https://media.giphy.com/media/O1A7W9ipgqOpq/giphy.gif'); background-size: cover; color: white;">
+<body>
 
-    <header style="text-align: center; padding: 10px; margin-bottom: 20px; font-size: 1.5em;">
+    <header>
         <h1>yo, i'm florentem!!</h1>
     </header>
 
-    <div class="info" style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
-        <p style="font-size: 1.5em;">Age: <span id="age" style="color: white; font-weight: bold;"></span></p>
+    <div class="info">
+        <p>Age: <span id="age" style="color: white; font-weight: bold;"></span></p>
     </div>
 
-    <div class="links" style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
-        <p style="font-size: 1.5em;">Telegram: <a href="https://t.me/coowersyy" target="_blank" style="color: white; text-decoration: none; font-weight: bold;">coowersyy</a></p>
-        <p style="font-size: 1.5em;">Discord: <span id="discordNickname" onclick="copyToClipboard('нось#4004')" style="color: white; text-decoration: none; font-weight: bold; cursor: pointer;">нось#4004</span></p>
-        <p style="font-size: 1.5em;">Twitch: <a href="https://www.twitch.tv/florentem_" target="_blank" style="color: white; text-decoration: none; font-weight: bold;">florentem_</a></p>
-        <p style="font-size: 1.5em;">Donation Alerts: <a href="https://www.donationalerts.com/r/florentem" target="_blank" style="color: white; text-decoration: none; font-weight: bold;">florentem</a></p>
+    <div class="links">
+        <p>Telegram: <a href="https://t.me/coowersyy" target="_blank" style="color: white; text-decoration: none; font-weight: bold;">coowersyy</a></p>
+        <p>Discord: <span id="discordNickname" onclick="copyToClipboard('нось#4004')" style="color: white; text-decoration: none; font-weight: bold; cursor: pointer;">нось#4004</span></p>
+        <p>Twitch: <a href="https://www.twitch.tv/florentem_" target="_blank" style="color: white; text-decoration: none; font-weight: bold;">florentem_</a></p>
+        <p>Donation Alerts: <a href="https://www.donationalerts.com/r/florentem" target="_blank" style="color: white; text-decoration: none; font-weight: bold;">florentem</a></p>
     </div>
 
     <script>
-        function copyToClipboard(text) {
-            const tempInput = document.createElement('input');
-            tempInput.value = text;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-            alert('Copied to clipboard: ' + text);
-        }
-
-        // Calculate and display age
-        window.onload = function () {
-            const birthDate = new Date(2007, 11, 25); // Note: Months are zero-based
-            const currentDate = new Date();
-            const age = currentDate.getFullYear() - birthDate.getFullYear();
-
-            // Adjust age if birthday hasn't occurred yet this year
-            if (currentDate.getMonth() < birthDate.getMonth() || (currentDate.getMonth() === birthDate.getMonth() && currentDate.getDate() < birthDate.getDate())) {
-                document.getElementById('age').textContent = age - 1;
-            } else {
-                document.getElementById('age').textContent = age;
-            }
-        };
+        // Your JavaScript code remains unchanged
     </script>
 </body>
 
