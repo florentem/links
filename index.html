@@ -38,7 +38,7 @@
             }
 
             p {
-                font-size: 1.2em;
+                font-size: 1.5em;
             }
         }
     </style>
@@ -62,7 +62,29 @@
     </div>
 
     <script>
-        // Your JavaScript code remains unchanged
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Copied to clipboard: ' + text);
+        }
+
+        // Calculate and display age
+        window.onload = function () {
+            const birthDate = new Date(2007, 11, 25); // Note: Months are zero-based
+            const currentDate = new Date();
+            const age = currentDate.getFullYear() - birthDate.getFullYear();
+
+            // Adjust age if birthday hasn't occurred yet this year
+            if (currentDate.getMonth() < birthDate.getMonth() || (currentDate.getMonth() === birthDate.getMonth() && currentDate.getDate() < birthDate.getDate())) {
+                document.getElementById('age').textContent = age - 1;
+            } else {
+                document.getElementById('age').textContent = age;
+            }
+        };
     </script>
 </body>
 
