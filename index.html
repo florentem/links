@@ -55,10 +55,6 @@
         <h1>yo, i'm florentem!!</h1>
     </header>
 
-    <div class="info">
-        <p>Age: <span id="age" style="color: white; font-weight: bold;"></span></p>
-    </div>
-
     <div class="links">
         <p>Telegram: <a href="https://t.me/coowersyy" target="_blank" style="color: white; text-decoration: none; font-weight: bold;">coowersyy</a></p>
         <p>Discord: <span id="discordNickname" onclick="copyToClipboard('нось#4004')" style="color: white; text-decoration: none; font-weight: bold; cursor: pointer;">нось#4004</span></p>
@@ -76,17 +72,7 @@
             document.body.removeChild(tempInput);
             alert('Copied to clipboard: ' + text);
         }
-
-        // Calculate and display age
-        window.onload = function () {
-            const birthDate = new Date(2007, 11, 25); // Note: Months are zero-based
-            const currentDate = new Date();
-            const age = currentDate.getFullYear() - birthDate.getFullYear();
-
-            // Adjust age if birthday hasn't occurred yet this year
-            if (currentDate.getMonth() < birthDate.getMonth() || (currentDate.getMonth() === birthDate.getMonth() && currentDate.getDate() < birthDate.getDate())) {
-                document.getElementById('age').textContent = age - 1;
-            } else {
+ {
                 document.getElementById('age').textContent = age;
             }
         };
