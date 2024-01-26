@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Florentem info</title>
+    <title>Florentem Links</title>
     <style>
         body {
-           margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    background-image: url(https://media.giphy.com/media/O1A7W9ipgqOpq/giphy.gif);
-    background-repeat: no-repeat;
-    background-color: black;
-    background-size: cover;
-    color: white;
-    height: 100vh;
-    background-position-x: center;
-}
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            background-image: url(https://media.giphy.com/media/O1A7W9ipgqOpq/giphy.gif);
+            background-repeat: no-repeat;
+            background-color: black;
+            background-size: cover;
+            color: white;
+            height: 100vh;
+            background-position-x: center;
+        }
 
         header {
             text-align: center;
@@ -27,14 +27,24 @@
             font-size: 2em;
         }
 
-        .info, .links {
-            text-align: center;
-            margin-top: 10px;
-            margin-bottom: 20px;
+        .windows {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px; /* Reduced gap between buttons */
         }
 
-        p {
-            font-size: 1.5em;
+        .window {
+            background-color: #333;
+            color: white;
+            font-weight: bold;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: 2px solid #111;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 40%;
+            text-align: center;
         }
 
         @media (max-width: 600px) {
@@ -42,8 +52,8 @@
                 font-size: 1.5em;
             }
 
-            p {
-                font-size: 1.5em;
+            .window {
+                width: 80%;
             }
         }
     </style>
@@ -52,14 +62,14 @@
 <body>
 
     <header>
-        <h1>yo, i'm florentem!!</h1>
+        <h1>Links</h1>
     </header>
 
-    <div class="links">
-        <p>Telegram: <a href="https://t.me/coowersyy" target="_blank" style="color: white; text-decoration: none; font-weight: bold;">coowersyy</a></p>
-        <p>Discord: <span id="discordNickname" onclick="copyToClipboard('нось#4004')" style="color: white; text-decoration: none; font-weight: bold; cursor: pointer;">нось#4004</span></p>
-        <p>Twitch: <a href="https://www.twitch.tv/florentem_" target="_blank" style="color: white; text-decoration: none; font-weight: bold;">florentem_</a></p>
-        <p>Donation Alerts: <a href="https://www.donationalerts.com/r/florentem" target="_blank" style="color: white; text-decoration: none; font-weight: bold;">florentem</a></p>
+    <div class="windows">
+        <div class="window" onclick="window.location.href='https://t.me/coowersyy'">Telegram</div>
+        <div class="window" onclick="window.location.href='https://www.twitch.tv/florentem_'">Twitch</div>
+        <div class="window" onclick="copyToClipboard('нось#4004')">Discord</div>
+        <div class="window" onclick="window.location.href='https://www.donationalerts.com/r/florentem'">Donate</div>
     </div>
 
     <script>
@@ -72,10 +82,6 @@
             document.body.removeChild(tempInput);
             alert('Copied to clipboard: ' + text);
         }
- {
-                document.getElementById('age').textContent = age;
-            }
-        };
     </script>
 </body>
 
