@@ -27,14 +27,12 @@
             font-size: 2em;
         }
 
-        .windows {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 10px; /* Reduced gap between buttons */
+        .links {
+            text-align: center;
+            margin-top: 50px;
         }
 
-        .window {
+        button {
             background-color: #333;
             color: white;
             font-weight: bold;
@@ -42,18 +40,17 @@
             font-size: 1.2em;
             border: 2px solid #111;
             border-radius: 10px;
+            margin: 10px 0;
             cursor: pointer;
-            width: 40%;
-            text-align: center;
+            display: block;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         @media (max-width: 600px) {
             header {
                 font-size: 1.5em;
-            }
-
-            .window {
-                width: 80%;
             }
         }
     </style>
@@ -65,11 +62,11 @@
         <h1>Links</h1>
     </header>
 
-    <div class="windows">
-        <div class="window" onclick="window.location.href='https://t.me/coowersyy'">Telegram</div>
-        <div class="window" onclick="window.location.href='https://www.twitch.tv/florentem_'">Twitch</div>
-        <div class="window" onclick="copyToClipboard('нось#4004')">Discord</div>
-        <div class="window" onclick="window.location.href='https://www.donationalerts.com/r/florentem'">Donate</div>
+    <div class="links">
+        <button onclick="window.location.href='https://t.me/coowersyy'">Telegram</button>
+        <button onclick="window.location.href='https://www.twitch.tv/florentem_'">Twitch</button>
+        <button onclick="copyToClipboard('нось#4004')">Discord</button>
+        <button onclick="window.location.href='https://www.donationalerts.com/r/florentem'">Donate</button>
     </div>
 
     <script>
